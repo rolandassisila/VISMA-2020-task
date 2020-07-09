@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISMA 2020</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<!--FORM -->
+    <div class="contact-app-box">
+        <form id="new-contact" action="#">
+            <h1>Add a new contact to Client List</h1>
+            <div class="name">
+                <label>*First Name: </label>
+                <input type="text" id="name" name="name" placeholder="First  name" pattern="[A-Za-z]+" required maxlength = "30"/>
+            </div>
+            <div class="lastname">
+                <label>*Last name: </label>
+                <input type="text" id="lastname" name="lastname" placeholder="Last name" pattern="[A-Za-z]+" required maxlength = "30"/>
+            </div>
+            <div class="date">
+                <label>*Date of birth: </label>
+                <input type="date" id="date" name="date" required />
+            </div>
+            <div class="phonenumber">
+                <label>*Phone number: </label>
+                <input type="tel" id="number" name="phone" placeholder="8 612 34 567" pattern="[0-9]+" required maxlength = "30" onBlur="validNumber()"/>
+            </div>
+            <div class="email">
+                <label>*Email address: </label>
+                <input type="email" id="email" name="email" placeholder="Email address" required maxlength = "30" onBlur="validEmail()"/>
+            </div>
+            <div class="address">
+                <label>Address:</label>
+                <input type="text" id="address" name="address" placeholder="Address" maxlength = "80"/>
+            </div>
+            <div>
+                <input type="submit" id="submit" name="submit" value="Add to the List" />
+            </div>
+			<label id="lblError"></label>
+            <label id="lblEdit"></label>
+        </form>
+    </div>
+    <!-- TABLE for data -->
+    <table class="contact-table" id="result">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Lastname</th>
+                <th>Date of Birth</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="contact-list"></tbody>
+    </table>
+<script src="script.js"></script>
+</body>
+</html>

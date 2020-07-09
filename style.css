@@ -1,0 +1,30 @@
+.contact-app-box {
+    padding: 2em;
+    margin: auto;
+    max-width: 20em;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 0.9em;
+    margin: 0.4em;
+    padding: 0.5em;
+}
+
+.contact-table {
+    margin-top: 2em;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid;
+    text-align: left;
+}
+
+#lblError {
+    color:red;
+}
+
+#lblEdit {
+    color: blue;
+}
